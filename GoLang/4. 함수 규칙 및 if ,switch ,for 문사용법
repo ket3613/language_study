@@ -14,8 +14,7 @@ go / golang 문법 및 함수
 
 golang 에서  함수 읽는법
 
-<pre>
-<code>{
+("``
 package main
 
 import (
@@ -36,8 +35,7 @@ func main(){
     fmt.Println(result)
 }
 
-}</code>
-</pre>
+`")
 출력값 3
 
  
