@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
     
     return MaterialApp();
   }
-}
+};
 code 3 // 정상적으로 출력
 
 위젯 정리
