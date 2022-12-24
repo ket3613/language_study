@@ -1,5 +1,4 @@
 flutter 만들기
-
 -----
 1. 시작 
 1-1 lib 경로에 main.dart 파일이 시작 파일이다.
@@ -20,6 +19,53 @@ class MyApp extends StatelessWidget {
 
 위젯 정리
 -------------------------------
+2. App 사용가능한 박스 위젯
+
+2-1 글자 사용 예제
+``` dart
+       const Text(
+            'FLUTTER',
+            style: TextStyle(
+              fontSize: 20,
+              fontWeight: FontWeight.w700,
+              color: Colors.red,
+            ),
+          ),
+          ## 아이콘
+         const Icon(Icons.star)
+         ##이미지 불러오기 불러오기번에 세팅해야한다
+         ## pubspec.yaml
+         ## flutter:
+         ##   assets:
+         ##     - assets/
+         ## 경로를 추가해줘야 사용할수 있다
+         Image.asset("assets/Lenna.png")
+         ## 가운데 정렬
+         Center()
+```
+
+2-5 여러개 사용시 
+
+ Row(
+            ## 가운데 사이간격 정렬
+            mainAxisAlignment: MainAxisAlignment.center,
+            children :const [
+              Icon(Icons.star),
+              Icon(Icons.star),
+              Text("test"),
+            ]
+          )
+
+ Column(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children :const [
+              Icon(Icons.star),
+              Icon(Icons.star),
+              Text("test"),
+            ]
+        )
+
+
 3. App 구분 및 위치
 
 ``` dart
@@ -42,7 +88,7 @@ class MyApp extends StatelessWidget {
     );
   }
 ``` 
-
+--------------------------------
 
 
 
