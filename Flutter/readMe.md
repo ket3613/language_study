@@ -11,7 +11,8 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    
+    ## MaterialApp  구글 스타일에 앱 구성정보 갖고 있다
+    ## CupertinoApp IOS  스타일에 앱구성 정보 갖고 있다
     return MaterialApp();
   }
 };
@@ -19,22 +20,28 @@ class MyApp extends StatelessWidget {
 
 위젯 정리
 -------------------------------
+3. App 구분 및 위치
 
-
-
-
-
-
-
-
-
-
-
-
----------------------------------------------
-2.
-상단 중간 하단 나누기
-
+``` dart
+  @override
+  Widget build(BuildContext context) {
+    
+    ## google_style_app
+    return MaterialApp(
+    ## Scaffold 사용시 3단 구분을 사용하기위한 기본함수
+      home: Scaffold(
+        ##  appBar: 상단바
+        appBar: AppBar(),
+        
+        ##  body: 중단바
+        body: body: Container(),
+        
+        ##  bottomNavigationBar: 하단바
+        bottomNavigationBar: BottomAppBar(),
+      )
+    );
+  }
+``` 
 
 
 
