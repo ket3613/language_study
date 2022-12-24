@@ -45,7 +45,7 @@ class MyApp extends StatelessWidget {
 ```
 
 2-5 여러개 사용시 
-
+``` dart
  Row(
             ## 가운데 사이간격 정렬
             mainAxisAlignment: MainAxisAlignment.center,
@@ -64,10 +64,9 @@ class MyApp extends StatelessWidget {
               Text("test"),
             ]
         )
-
+```
 
 3. App 구분 및 위치
-
 ``` dart
   @override
   Widget build(BuildContext context) {
