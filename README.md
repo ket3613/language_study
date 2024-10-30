@@ -26,4 +26,5 @@
 # PL/SQL
 1. PLsql function을 통한 이메일 알람 기능 구현
 2. oracle erp pl/sql 을 통한 운영 및 개발
+3. pl/sql 을 통한 사내 문자매세지 발송 알람 개발
   
