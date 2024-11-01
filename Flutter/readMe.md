@@ -1,4 +1,7 @@
 flutter 만들기
+참조 url : https://github.com/ket3613/FlutterPattern
+
+
 -----
 1. 시작 
 1-1 lib 경로에 main.dart 파일이 시작 파일이다.
