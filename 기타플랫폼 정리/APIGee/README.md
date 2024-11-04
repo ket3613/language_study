@@ -6,4 +6,4 @@
 
 
 APIgee 흐름도
-![image](../apigee.png/)
+![image](apigee.png) 
