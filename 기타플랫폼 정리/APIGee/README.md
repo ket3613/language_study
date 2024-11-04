@@ -20,7 +20,10 @@ public void apigeeUpdateCheck(){
    try{
       // 4시간 단위로 갱신
       if (paxUpdateDate == null || Duration.between(paxUpdateDate, LocalDateTime.now()).toHours() >= 4){
+
+         //key,id 값을 aws secretManager 저장지 호출을 통해 가져옴
          String secretIDKEY = apiGeeService.getSecretIDKEY(secretArn).replaceAll(",", ":");
+
          String[] spliet = secretIDKEY.split(":");
          paxClientId = spliet[1].replaceAll("\"", "").replaceAll("}", "");
          paxClientSecret = spliet[3].replaceAll("\"", "").replaceAll("}", "");
