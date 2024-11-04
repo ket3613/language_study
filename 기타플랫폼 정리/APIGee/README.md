@@ -70,3 +70,74 @@ public String getToken(String clientId, String clientSecret) throws Exception{
     }
 }
  ```
+
+2.api호출에 토큰 정보 입력
+ ```java
+List<CompletableFuture<String>> apiCallFutures = new ArrayList<>();
+apiCallFutures.add(apiGeeService.getApigeeData(apigeeToken, 보내는 데이터 내용));
+VOList = new ArrayList<>();
+
+public CompletableFuture<String> getApigeeData(String accessToken, List<VO> 보내는 데이터 내용) throws Exception{
+
+    //연결시간 제한
+    RequestConfig requestConfig = RequestConfig.custom().setConnectTimeout(2000).setSocketTimeout(2000).build();
+    CloseableHttpClient httpClient = HttpClients.custom().setDefaultRequestConfig(requestConfig).build();
+
+    // HTTP POST 요청 생성
+    HttpPost httpPost = new HttpPost(호출 URL);
+
+    // Authorization 헤더에 토큰 추가
+    httpPost.setHeader(HttpHeaders.AUTHORIZATION, "Bearer " + accessToken);
+
+    ObjectMapper objectMapper = new ObjectMapper();
+    String jsonString = objectMapper.writeValueAsString(VO);
+    // 요청에 필요한 매개변수 설정 (JSON 형태로 변환)
+    String resultJsonString = "{\"numbers\":" + jsonString + "}";
+    StringEntity requestEntity = new StringEntity(resultJsonString);
+    requestEntity.setContentType("application/json");
+    httpPost.setEntity(requestEntity);
+
+    // CompletableFuture를 사용하여 비동기적으로 HTTP 요청 보내고 결과를 반환
+    return CompletableFuture.supplyAsync(() -> {
+        try {
+            // HTTP 요청 수행 및 응답 처리
+            HttpResponse response = httpClient.execute(httpPost);
+            HttpEntity entity = response.getEntity();
+
+            if (entity != null) {
+                return EntityUtils.toString(entity, StandardCharsets.UTF_8);
+            }
+        } catch (IOException e) {
+            log.info("Failed to send HTTP request: " + e.getMessage());
+        } finally {
+            try {
+                httpClient.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        return null;
+    });
+}
+ ```
+
+3. api호출 및 반환
+ ```java
+
+// 불특정 개수의 API 호출이 완료될 때까지 기다립니다.
+CompletableFuture<Void> allOf = CompletableFuture.allOf(
+        apiCallFutures.toArray(new CompletableFuture[0]));
+
+allOf.get(2, TimeUnit.SECONDS);
+
+// CompletableFuture가 완료될 때까지 기다린 다음 결과를 처리합니다.
+allOf.thenRun(() -> {
+    for (CompletableFuture<String> future : apiCallFutures) {
+        String response = future.join();
+        // 결과를 처리하거나 결합합니다.
+        test1.add(response);
+
+    }
+});
+ ```
+
