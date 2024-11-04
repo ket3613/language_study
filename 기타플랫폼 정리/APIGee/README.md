@@ -6,4 +6,4 @@
 
 
 APIgee 흐름도
-![image](https://github.com/user-attachments/assets/91b238f0-cedc-4811-84e4-e7c43836d3c5)
+![image](../apigee.png/)
