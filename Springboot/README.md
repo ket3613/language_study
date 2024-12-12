@@ -1,3 +1,69 @@
+## NeverMineMall (20대 아우터 쇼핑몰)
+
+**구 분** | **내 용**
+--- | ---
+**성명** | 강은택 (팀원: 장동홍, 고한별, 이나현, 노하람, 전환희)
+**프로젝트명** | NeverMineMall
+**개발기간/참여인원** | 2019.11.27 ~ 2019.12.08 (12일) / 6명
+**개발환경 (사용언어)** | IDE: Eclipse<br>DB: Oracle<br>개발언어: Java, JSP & Servlet, HTML, CSS, JS<br>라이브러리: jQuery, JSTL, JDBC, jqChart, 우편번호 API, 아임포트 결제 API, 카카오 로그인 API<br>서버: Apache Tomcat<br>협업 툴: Git & GitHub<br>프레임워크: Bootstrap
+
+---
+
+### 본인의 역할
+- 로그인 기능 구현
+- 회원가입, 탈퇴, 수정 기능 구현
+- 관리자 페이지 로그인 및 회원 정보 구현
+- UI, 회원 테이블 및 쿼리 작성
+
+---
+
+### 프로젝트 개요
+오프라인에 국한되지 않고 기하급수적으로 늘어나는 온라인 구매 수요에 맞춰, 20~30대 여성을 대상으로 하는 19F/W 아우터 의류 쇼핑몰을 제작했습니다.  
+소비자들이 상품 정보를 쉽게 얻고, 문의 및 요구 사항에 즉각 응답 가능하며, 24시간 이용 가능한 쇼핑몰을 제공합니다.
+
+---
+
+### 프로젝트 내용
+- **테이블 구성**:
+  - 유저, 관리자, 리뷰, 장바구니, 제품, 제품 리뷰, 관리자 아이디 등 테이블 구현
+- **주요 기능**:
+  - 회원가입 및 로그인 (자체 로그인 및 카카오톡 로그인)
+  - 메인 페이지에서 회원 관리와 상품 판매
+  - 관리자 페이지에서 통계 작성 및 회원 관리
+  - 주소 API를 통한 회원가입 및 유효성 검사
+  - 제품 정렬 (카테고리, 출간일, 이름순) 및 페이징 처리
+  - 검색 기능 (제목, 문학사 등)
+- **관리자 기능**:
+  - Google Chart를 활용한 매출 및 이용자 표시
+  - Ajax를 통한 실시간 배송 정보 표시
+  - 유저 구매 코드 생성 및 표시
+  - 구매 시간, 배송 상태, 결제 상태 표시
+  - 회원 정보 권한 및 가입 시간 관리
+
+---
+
+### 주요 코드
+- 전달되는 값을 가로채 인코딩 변환
+- HTTP 요청 정보를 활용한 컨트롤러 호출
+- Properties를 이용한 경로 저장 및 유지 관리
+
+---
+<div align="center">
+  <img src="Image/springboot_01.png" alt="springboot_01.png" width="250" height="200">
+  <img src="Image/springboot_02.png" alt="springboot_02.png" width="250" height="200">
+  <img src="Image/springboot_03.png" alt="springboot_03.png" width="250" height="200">
+</div>
+<div align="center">
+  <img src="Image/springboot_04.png" alt="springboot_04.png" width="250" height="200">
+  <img src="Image/springboot_05.png" alt="springboot_05.png" width="250" height="200">
+  <img src="Image/springboot_06.png" alt="springboot_06.png" width="250" height="200">
+</div>
+<div align="center">
+  <img src="Image/springboot_07.png" alt="springboot_07.png" width="250" height="200">
+  <img src="Image/springboot_08.png" alt="springboot_08.png" width="250" height="200">
+</div>
+
+
 # 개인 프로젝트
 
 ## NamTang (도서 쇼핑몰)
@@ -58,70 +124,4 @@
   <img src="Image/springboot_1.png" alt="springboot_1" width="250" height="200">
   <img src="Image/springboot_2.png" alt="springboot_2" width="250" height="200">
   <img src="Image/springboot_3.png" alt="springboot_3" width="250" height="200">
-  <img src="Image/springboot_4.png" alt="springboot_4" width="250" height="200">
-</div>
-
-
-
-## NeverMineMall (20대 아우터 쇼핑몰)
-
-**구 분** | **내 용**
---- | ---
-**성명** | 강은택 (팀원: 장동홍, 고한별, 이나현, 노하람, 전환희)
-**프로젝트명** | NeverMineMall
-**개발기간/참여인원** | 2019.11.27 ~ 2019.12.08 (12일) / 6명
-**개발환경 (사용언어)** | IDE: Eclipse<br>DB: Oracle<br>개발언어: Java, JSP & Servlet, HTML, CSS, JS<br>라이브러리: jQuery, JSTL, JDBC, jqChart, 우편번호 API, 아임포트 결제 API, 카카오 로그인 API<br>서버: Apache Tomcat<br>협업 툴: Git & GitHub<br>프레임워크: Bootstrap
-
----
-
-### 본인의 역할
-- 로그인 기능 구현
-- 회원가입, 탈퇴, 수정 기능 구현
-- 관리자 페이지 로그인 및 회원 정보 구현
-- UI, 회원 테이블 및 쿼리 작성
-
----
-
-### 프로젝트 개요
-오프라인에 국한되지 않고 기하급수적으로 늘어나는 온라인 구매 수요에 맞춰, 20~30대 여성을 대상으로 하는 19F/W 아우터 의류 쇼핑몰을 제작했습니다.  
-소비자들이 상품 정보를 쉽게 얻고, 문의 및 요구 사항에 즉각 응답 가능하며, 24시간 이용 가능한 쇼핑몰을 제공합니다.
-
----
-
-### 프로젝트 내용
-- **테이블 구성**:
-  - 유저, 관리자, 리뷰, 장바구니, 제품, 제품 리뷰, 관리자 아이디 등 테이블 구현
-- **주요 기능**:
-  - 회원가입 및 로그인 (자체 로그인 및 카카오톡 로그인)
-  - 메인 페이지에서 회원 관리와 상품 판매
-  - 관리자 페이지에서 통계 작성 및 회원 관리
-  - 주소 API를 통한 회원가입 및 유효성 검사
-  - 제품 정렬 (카테고리, 출간일, 이름순) 및 페이징 처리
-  - 검색 기능 (제목, 문학사 등)
-- **관리자 기능**:
-  - Google Chart를 활용한 매출 및 이용자 표시
-  - Ajax를 통한 실시간 배송 정보 표시
-  - 유저 구매 코드 생성 및 표시
-  - 구매 시간, 배송 상태, 결제 상태 표시
-  - 회원 정보 권한 및 가입 시간 관리
-
----
-
-### 주요 코드
-- 전달되는 값을 가로채 인코딩 변환
-- HTTP 요청 정보를 활용한 컨트롤러 호출
-- Properties를 이용한 경로 저장 및 유지 관리
-
----
-<div align="center">
-  <img src="Image/springboot_01.png" alt="springboot_01.png" width="250" height="200">
-  <img src="Image/springboot_02.png" alt="springboot_02.png" width="250" height="200">
-  <img src="Image/springboot_03.png" alt="springboot_03.png" width="250" height="200">
-  <img src="Image/springboot_04.png" alt="springboot_04.png" width="250" height="200">
-</div>
-<div align="center">
-  <img src="Image/springboot_05.png" alt="springboot_05.png" width="250" height="200">
-  <img src="Image/springboot_06.png" alt="springboot_06.png" width="250" height="200">
-  <img src="Image/springboot_07.png" alt="springboot_07.png" width="250" height="200">
-  <img src="Image/springboot_08.png" alt="springboot_08.png" width="250" height="200">
 </div>
