@@ -44,16 +44,6 @@
 
 ### 프로젝트 이미지
 #### 주요 이미지
-| 이미지 | 설명 |
-| --- | --- |
-| ![unity_1](image/unity_1.png) | **Unity Screenshot 1** |
-| ![unity_2](image/unity_2.png) | **Unity Screenshot 2** |
-| ![unity_3](image/unity_3.png) | **Unity Screenshot 3** |
-| ![unity_4](image/unity_4.png) | **Unity Screenshot 4** |
-| ![unity_5](image/unity_5.png) | **Unity Screenshot 5** |
-| ![unity_6](image/unity_6.png) | **Unity Screenshot 6** |
-| ![unity_7](image/unity_7.png) | **Unity Screenshot 7** |
-
 <div align="center">
   <img src="image/unity_1.png" alt="Unity Screenshot 1" width="250" height="200">
   <img src="image/unity_2.png" alt="Unity Screenshot 2" width="250" height="200">
